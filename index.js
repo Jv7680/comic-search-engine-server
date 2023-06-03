@@ -8,14 +8,14 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-const client = require('./elasticsearch/client');
+const client = require('./server/elasticsearch/client');
 
 app.get("/", (req, res) => {
     res.json({ message: "API Comic Searching" });
 });
 
-const ingestData = require('./data_management/retrieve_and_ingest_data');
-const getData = require('./data_management/routeData');
+const ingestData = require('./server/data_management/retrieve_and_ingest_data');
+const getData = require('./server/data_management/routeData');
 
 app.use('/ingest-data', ingestData);
 
