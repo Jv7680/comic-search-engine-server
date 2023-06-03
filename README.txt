@@ -23,7 +23,7 @@ chức năng
     "genres": [],
     "minRate": 1,
     "maxRate": 5,
-    "minChapterNumer": 200,
+    "minChapterNumber": 200,
     "page": 1,
     "sortType": 7
 }
