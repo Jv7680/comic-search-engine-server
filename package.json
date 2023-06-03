@@ -2,10 +2,10 @@
   "name": "comics_search",
   "version": "1.0.0",
   "description": "comics_search",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server/server.js" 
+    "start": "nodemon index.js"
   },
   "author": "heaven0708",
   "license": "ISC",

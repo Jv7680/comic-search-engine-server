@@ -8,14 +8,14 @@ app.use(bodyParser.json());
 
 app.use(cors());
 
-const client = require('./elasticsearch/client');
+const client = require('./server/elasticsearch/client');
 
 app.get("/", (req, res) => {
     res.json({ message: "API Comic Searching" });
 });
 
-const ingestData = require('./data_management/retrieve_and_ingest_data');
-const getData = require('./data_management/routeData');
+const ingestData = require('./server/data_management/retrieve_and_ingest_data');
+const getData = require('./server/data_management/routeData');
 
 app.use('/ingest-data', ingestData);
 
@@ -23,15 +23,12 @@ app.use('/', getData)
 
 app.post('/search', (req, res) => {
     const genres = req.body.genres;
-
     const minRate = req.body.minRate;
     const maxRate = req.body.maxRate;
-
     const minChapterNumber = req.body.minChapterNumber;
-
-    const status = req.body.status;
-
     const page = req.body.page;
+
+    //const status = req.body.status;
 
     //sort type
     var sortType = []
@@ -91,7 +88,7 @@ app.post('/search', (req, res) => {
 
     if (req.body.title) {
         searchTitle = {
-            match: {
+            match_phrase: {
                 title: req.body.title,
             }
         }
