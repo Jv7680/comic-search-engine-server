@@ -16,12 +16,12 @@ const { Client } = require('@elastic/elasticsearch');
 
 const client = new Client({
   cloud: {
-    id: "Heaven_server:dXMtd2VzdDEuZ2NwLmNsb3VkLmVzLmlvOjQ0MyQ5NThhMzcwM2RkYjc0ODI5YjJhYTY0Zjc1YzNlNzg0OSRiNDEwMGNiNzU0YTc0YzA4YWY3MzJlZWY3ZmNlMmNkNw==",
+    id: "commic-search-engine:YXNpYS1zb3V0aGVhc3QxLmdjcC5lbGFzdGljLWNsb3VkLmNvbTo0NDMkNGQwMmEwNjNiOTQzNDA2MmFhNzJhMGEzOTNjMTc3ZjAkYjU3NDBiN2QyMjk2NDk2MmJlYzM3NDhhMThlNGEzOTA=",
   },
   auth: {
-    // username: elasticConfig.username,
-    // password: elasticConfig.password
-    apiKey: "OTFXOGU0Z0IzRjVTaWkyV2JGbXM6WksxOFVwa2hUUGEzVzFsSE42b0RFQQ=="
+    // username: "elastic",
+    // password: "eYaL4CbMaUaUqrr3CdSdebzE"
+    apiKey: "azJranFZMEJ2UnBSMWJSRFVJbVI6cDRrdVl1am1RVXFYV1d5WnNIVnFDdw=="
   },
 });
 

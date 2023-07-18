@@ -46,7 +46,8 @@ router.get("/search", async function (req, res) {
           await client.index({
             index: "comics",
             body: comicObject,
-            pipeline: "comic_data_pipeline",
+            // pipeline: "comic_data_pipeline",
+            pipeline: "comics_data",
           })
         )
       );
